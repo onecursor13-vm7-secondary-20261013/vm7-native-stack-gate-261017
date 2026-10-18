@@ -1,12 +1,3 @@
-queue_rules:
-  - name: VM7 native stack per-member approval queue
-    queue_conditions:
-      - check-success = Mergify Merge Protections
-    merge_conditions:
-      - check-success = Mergify Merge Protections
-    merge_method: merge
-    branch_protection_injection_mode: queue
-
 merge_protections_settings:
   reporting_method: check-runs
   post_comment: true
