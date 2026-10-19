@@ -1,18 +1,9 @@
-queue_rules:
-  - name: VM7 native stack membership mutation queue
-    queue_conditions:
-      - check-success = Mergify Merge Protections
-    merge_conditions:
-      - check-success = Mergify Merge Protections
-    merge_method: merge
-    branch_protection_injection_mode: queue
-
 merge_protections_settings:
   reporting_method: check-runs
   post_comment: true
 
 merge_protections:
-  - name: VM7 native stack membership requires Secondary Owner approval
+  - name: VM7 native stack root requires Secondary Owner approval
     if:
       - base = main
     success_conditions:
